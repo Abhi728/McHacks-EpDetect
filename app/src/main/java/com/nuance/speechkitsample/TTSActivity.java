@@ -69,6 +69,8 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
         //Create a session
         speechSession = Session.Factory.session(this, Configuration.SERVER_URI, Configuration.APP_KEY);
         speechSession.getAudioPlayer().setListener(this);
+
+        PebbleKit.startAppOnPebble(this, EpDetect_ID);
     }
 
     @Override
