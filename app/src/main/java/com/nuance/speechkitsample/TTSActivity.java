@@ -136,6 +136,42 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
         });
     }
 
+    private void synthesize2(String x) {
+        //Setup our TTS transaction options.
+        Transaction.Options options = new Transaction.Options();
+        options.setLanguage(new Language(language.getText().toString()));
+        //options.setVoice(new Voice(Voice.SAMANTHA)); //optionally change the Voice of the speaker, but will use the default if omitted.
+
+        //Start a TTS transaction
+        ttsTransaction = speechSession.speakString(x, options, new Transaction.Listener() {
+            @Override
+            public void onAudio(Transaction transaction, Audio audio) {
+                logs.append("\nonAudio");
+
+                //The TTS audio has returned from the server, and has begun auto-playing.
+                ttsTransaction = null;
+                toggleTTS.setText(getResources().getString(R.string.speak_string));
+            }
+
+            @Override
+            public void onSuccess(Transaction transaction, String s) {
+                logs.append("\nonSuccess");
+
+                //Notification of a successful transaction. Nothing to do here.
+            }
+
+            @Override
+            public void onError(Transaction transaction, String s, TransactionException e) {
+                logs.append("\nonError: " + e.getMessage() + ". " + s);
+
+                //Something went wrong. Check Configuration.java to ensure that your settings are correct.
+                //The user could also be offline, so be sure to handle this case appropriately.
+
+                ttsTransaction = null;
+            }
+        });
+    }
+
     /**
      * Cancel the TTS transaction.
      * This will only cancel if we have not received the audio from the server yet.
@@ -182,6 +218,8 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
                     Log.i("testing"," testing");
 
                     Log.i("Returned by peb : " , " peb : "+dict.getString(5));
+
+                    synthesize2(dict.getString(5));
 
                     //Log.i("Returned by peb : ", " peb222 : " + (dict.getInteger(1).toString()));
 
