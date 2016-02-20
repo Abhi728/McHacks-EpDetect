@@ -66,40 +66,6 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/logs_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/language_container"
-        android:layout_above="@+id/toggle_tts"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/logs_background">
-
-        <TextView
-            android:id="@+id/logs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="50dp"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:background="@android:color/transparent"/>
-
-        </ScrollView>
-
-
-    <TextView
-        android:id="@+id/logs_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/logs_container"
-        android:layout_alignLeft="@+id/logs_container"
-        android:layout_alignStart="@+id/logs_container"
-        android:layout_margin="15dp"
-        android:text="@string/logs_label"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#D1D1D1"/>
-
     <Button
         android:id="@+id/clear_logs"
         android:layout_width="wrap_content"
@@ -112,6 +78,41 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#2E85FF"
         style="?android:attr/borderlessButtonStyle"/>
+
+    <ScrollView
+        android:id="@+id/logs_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/logs_background"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/toggle_tts">
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/logs_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logs_container"
+        android:layout_alignLeft="@+id/logs_container"
+        android:layout_alignStart="@+id/logs_container"
+        android:layout_margin="15dp"
+        android:text="@string/logs_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#D1D1D1"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/logs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="50dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:background="@android:color/transparent"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/toggle_tts"
@@ -126,6 +127,15 @@
         android:layout_alignParentBottom="true">
         <include layout="@layout/footer"/>
     </FrameLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/helpImage"
+        android:src="@drawable/help_sign"
+        android:layout_alignTop="@+id/text_container"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp" />
 
 
 </RelativeLayout>

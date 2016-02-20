@@ -1,11 +1,18 @@
 package com.nuance.speechkitsample;
 
 import android.content.Context;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +57,10 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
 
     private static final UUID EpDetect_ID = UUID.fromString("70e4db8a-9cf4-430c-93c3-2f7d71e54b15");
 
+    private ImageView imgBlink;
+    private Uri notification;
+    private Ringtone r;
+
     private PebbleKit.PebbleDataReceiver ApDetectDataReceiver;
 
     @Override
@@ -72,6 +83,12 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
         speechSession.getAudioPlayer().setListener(this);
 
         PebbleKit.startAppOnPebble(this, EpDetect_ID);
+
+        blinkblinkImage();
+
+        notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
+        r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        r.play();
     }
 
     @Override
@@ -82,6 +99,19 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
             toggleTTS();
         }
     }
+
+    protected void blinkblinkImage() {
+
+        Animation animation = new AlphaAnimation(1, 0); // Change alpha
+        animation.setDuration(500); // duration - half a second
+        animation.setInterpolator(new LinearInterpolator()); // do not alter
+        animation.setRepeatCount(Animation.INFINITE); // Repeat animation
+        animation.setRepeatMode(Animation.REVERSE); // Reverse animation at
+
+        imgBlink.startAnimation(animation);
+
+    }
+
 
     /* TTS transactions */
 

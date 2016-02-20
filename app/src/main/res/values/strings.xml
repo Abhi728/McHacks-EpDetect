@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SpeechKit Sample</string>
-    <string name="app_version">SpeechKit SampleApp v2.1.2</string>
-    <string name="sdk_version">SpeechKit SDK 2.1.2</string>
+    <string name="app_name">Ep-Detect</string>
+    <string name="app_version"></string>
+    <string name="sdk_version"></string>
 
     <string name="title_activity_asr">Speech Recognition</string>
     <string name="title_activity_nlu">Speech and Natural Language</string>
     <string name="title_activity_text_nlu">Text and Natural Language</string>
-    <string name="title_activity_tts">Speech Synthesis</string>
+    <string name="title_activity_tts">Ep-Detect</string>
 
     <string name="title_activity_audio">Audio Playback</string>
 
@@ -43,7 +43,7 @@
     <string name="logs_label">logs</string>
     <string name="clear_logs_label">clear</string>
 
-    <string name="speak_string">speakString()</string>
+    <string name="speak_string">Disarm Alarm</string>
     <string name="cancel">cancel</string>
 
     <string name="recognize">recognize()</string>
