@@ -68,6 +68,8 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tts);
 
+        imgBlink = (ImageView)findViewById(R.id.helpImage);
+
         ttsText = (EditText)findViewById(R.id.tts_text);
         language = (EditText)findViewById(R.id.language);
 
@@ -97,6 +99,7 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
             logs.setText("");
         } else if(v == toggleTTS) {
             toggleTTS();
+            r.stop();
         }
     }
 
@@ -117,15 +120,15 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
 
     private void toggleTTS() {
         //If we are not loading TTS from the server, then we should do so.
-        if(ttsTransaction == null) {
-            toggleTTS.setText(getResources().getString(R.string.cancel));
-            synthesize();
-        }
-        //Otherwise lets attempt to cancel that transaction
-        else {
-            toggleTTS.setText(getResources().getString(R.string.speak_string));
-            stop();
-        }
+//        if(ttsTransaction == null) {
+//            toggleTTS.setText(getResources().getString(R.string.cancel));
+//            synthesize();
+//        }
+//        //Otherwise lets attempt to cancel that transaction
+//        else {
+        toggleTTS.setText(getResources().getString(R.string.speak_string));
+//            stop();
+   //     }
     }
 
     /**
