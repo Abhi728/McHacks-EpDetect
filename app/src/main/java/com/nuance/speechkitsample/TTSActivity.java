@@ -218,12 +218,17 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
 
                     Calendar calen = Calendar.getInstance();
 
-                    String hour = Integer.toString(calen.get(Calendar.HOUR));
+                    String hour = Integer.toString(calen.get(Calendar.HOUR_OF_DAY));
                     String minute = Integer.toString(calen.get(Calendar.MINUTE));
                     String seconds = Integer.toString(calen.get(Calendar.SECOND));
 
                     String timeNow = hour+":"+minute+":"+seconds;
-                    Log.i("Calen : ", timeNow);
+
+                    Log.i("Calen Int : ", timeNow);
+
+                    String timee = calen.getTime().toString();
+
+                    Log.i("Calen Date Time : ", timee);
 
                     synthesize2("Shake");
 
