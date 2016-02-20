@@ -18,6 +18,7 @@ import com.nuance.speechkit.Session;
 import com.nuance.speechkit.Transaction;
 import com.nuance.speechkit.TransactionException;
 
+import java.util.Calendar;
 import java.util.UUID;
 
 /**
@@ -211,15 +212,34 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
                     // Always ACK
                     PebbleKit.sendAckToPebble(context, transactionId);
 
-                    String x = "test";
+                    Log.i("testing", " testing");
 
-                    x = dict.getString(5);
+                    Log.i("Returned by peb : ", " peb : " + dict.getString(5));
 
-                    Log.i("testing"," testing");
+                    Calendar calen = Calendar.getInstance();
 
-                    Log.i("Returned by peb : " , " peb : "+dict.getString(5));
+                    String hour = Integer.toString(calen.get(Calendar.HOUR));
+                    String minute = Integer.toString(calen.get(Calendar.MINUTE));
+                    String seconds = Integer.toString(calen.get(Calendar.SECOND));
 
-                    synthesize2(dict.getString(5));
+                    String timeNow = hour+":"+minute+":"+seconds;
+                    Log.i("Calen : ", timeNow);
+
+                    synthesize2("Shake");
+
+                    /*String timee = calen.getTime().toString();
+
+                    timee.format("HH:mm:ss");
+
+                    Log.i("Calen : ", timee);
+
+                   synthesize2(dict.getString(5));
+
+                    synthesize2("Shake");*/
+
+
+
+
 
                     //Log.i("Returned by peb : ", " peb222 : " + (dict.getInteger(1).toString()));
 
