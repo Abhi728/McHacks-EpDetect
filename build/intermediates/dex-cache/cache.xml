@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\NX-1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-c7fdabaa0013713187933f3597fd27ded024edf8.jar" />
+    </item>
+    <item
+        jar="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\exploded-aar\com.getpebble\pebblekit\3.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="bd72bf60a6e56573eecb0e6abf419fac2b1fc1e6">
+        <dex dex="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\pre-dexed\debug\classes-17c4151b0e05b605d7e008837999f92d9e38e851.jar" />
+    </item>
+    <item
+        jar="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-ea701622d26692ec316170e1dfb49bfcbbac46f8.jar" />
+    </item>
+    <item
+        jar="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\pre-dexed\debug\classes-7ed006a3896cd6d95e70b2300851bf7d43ada03b.jar" />
+    </item>
+    <item
+        jar="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\pre-dexed\debug\classes-ba2a2a27ab9b045e61972741f3cbd42c42396706.jar" />
+    </item>
+    <item
+        jar="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\exploded-aar\com.nuance\speechkit\2.1.2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7da1ea483580ef49a040a38d6d26da185a1ebd0e">
+        <dex dex="C:\Users\NX-1\Desktop\EpDetect\app\build\intermediates\pre-dexed\debug\classes-10345d5296dfc8133616b425c29e0a07246a4d09.jar" />
+    </item>
+
+</items>
