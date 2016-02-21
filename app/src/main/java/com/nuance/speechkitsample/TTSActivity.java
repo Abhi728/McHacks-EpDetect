@@ -27,6 +27,8 @@ import com.nuance.speechkit.Transaction;
 import com.nuance.speechkit.TransactionException;
 
 import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.UUID;
 
 import Fragments.MainMenu;
@@ -93,10 +95,21 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
 
         notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-        if (r != null) {
-            r.play();
-        }
+
+        String y = "THIS IS A WARNING , DISARM YOUR NOTIFICATION OR EMERGENCY PERSONNELS  WILL BE NOTIFIED.,," +
+                   "THIS IS A WARNING , DISARM YOUR NOTIFICATION OR EMERGENCY PERSONNELS  WILL BE NOTIFIED.,," +
+                   "THIS IS A WARNING , DISARM YOUR NOTIFICATION OR EMERGENCY PERSONNELS WILL BE NOTIFIED.";
+
+        synthesize2(y);
+
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                r.play();
+            }
+        }, 21000);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -130,6 +143,7 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
 //        if(ttsTransaction == null) {
 //            toggleTTS.setText(getResources().getString(R.string.cancel));
 //            synthesize();
+
 //        }
 //        //Otherwise lets attempt to cancel that transaction
 //        else {
