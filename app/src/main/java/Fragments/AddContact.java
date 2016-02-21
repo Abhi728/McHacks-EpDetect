@@ -2,6 +2,8 @@ package Fragments;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,11 +46,30 @@ public class AddContact extends Fragment {
                 if (!name.isEmpty() && !number.isEmpty()) {
                     Contact c = new Contact(name, number);
                     contactList.add(c);
-                    Toast.makeText(root.getContext(), "Contact successfully add!", Toast.LENGTH_SHORT);
+                    Toast.makeText(root.getContext(), "Successfully added " + c.getName() + " to contact list!", Toast.LENGTH_SHORT).show();
+                    contactName.setText("");
+                    contactNumber.setText("");
+                    sendSMSMessage(number);
                 }
             }
         });
 
         return root;
+    }
+
+    public void sendSMSMessage(String number) {
+
+        String message = "This is a test!";
+
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(number, null, message, null, null);
+            Toast.makeText(root.getContext(), "SMS sent.", Toast.LENGTH_LONG).show();
+        }
+
+        catch (Exception e) {
+            Toast.makeText(root.getContext(), "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
     }
 }
