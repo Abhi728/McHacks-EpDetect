@@ -164,7 +164,7 @@ public class ASRActivity extends DetailActivity implements View.OnClickListener 
         public void onSuccess(Transaction transaction, String s) {
             logs.append("\nonSuccess");
 
-            //Notification of a successful transaction. Nothing to do here.
+            //AddContact of a successful transaction. Nothing to do here.
         }
 
         @Override

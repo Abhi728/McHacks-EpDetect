@@ -9,31 +9,31 @@
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Add Contact"
-        android:id="@+id/button"
+        android:text="@string/add_contact"
+        android:id="@+id/addContactButton"
         android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Remove Contact"
-        android:id="@+id/button2"
+        android:text="@string/remove_contact"
+        android:id="@+id/removeContactButton"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="View Contacts"
-        android:id="@+id/button3"
+        android:text="@string/view_contact"
+        android:id="@+id/viewContactButton"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Trigger"
-        android:id="@+id/button4"
+        android:text="@string/trigger"
+        android:id="@+id/triggerButton"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

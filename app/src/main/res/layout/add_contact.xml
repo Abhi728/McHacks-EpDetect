@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Add Contact Information"
+        android:text="@string/add_contact_title"
         android:layout_centerHorizontal="true"
         android:id="@+id/addContactTitle" />
 
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="50dp"
-        android:text="Contact Name"
+        android:text="@string/enter_contact_name"
         android:id="@+id/textView1"
         android:layout_below="@+id/addContactTitle"/>
 
@@ -27,7 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Enter Contact Name"
         android:ems="10"
         android:id="@+id/editText"
         android:layout_below="@+id/textView1" />
@@ -36,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="35dp"
-        android:text="Contact Phone Number"
+        android:text="@string/enter_contact_number"
         android:id="@+id/contactPhoneNumber"
         android:layout_below="@+id/editText"/>
 
@@ -46,8 +45,16 @@
         android:inputType="phone"
         android:ems="10"
         android:id="@+id/editText2"
-        android:text="Phone Number"
         android:layout_below="@+id/contactPhoneNumber" />
 
-    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_button"
+        android:id="@+id/submitContactButton"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp" />
+
+
 </RelativeLayout>

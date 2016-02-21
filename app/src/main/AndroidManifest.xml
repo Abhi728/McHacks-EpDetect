@@ -16,28 +16,24 @@
             android:name=".SplashScreenActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme">
-            android:name=".NLUActivity"
-            android:label="@string/title_activity_nlu"
-            android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize">
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />>
-        </activity>
-
-        <activity
-            android:label="@string/app_name"
-            android:name=".HelloMonkeyActivity"
-            android:screenOrientation="portrait">
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".HelloMonkeyActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+        </activity>
+
         <activity android:name=".MainActivityEP"
             android:theme="@style/AppTheme" />
+
+        <activity android:name=".TTSActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
 
     </application>
 

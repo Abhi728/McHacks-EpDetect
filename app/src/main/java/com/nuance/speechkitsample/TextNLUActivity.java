@@ -142,7 +142,7 @@ public class TextNLUActivity extends DetailActivity implements View.OnClickListe
         public void onSuccess(Transaction transaction, String s) {
             logs.append("\nonSuccess");
 
-            //Notification of a successful transaction. Nothing to do here.
+            //AddContact of a successful transaction. Nothing to do here.
             setState(State.IDLE);
         }
 

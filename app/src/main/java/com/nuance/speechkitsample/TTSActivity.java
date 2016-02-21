@@ -1,5 +1,6 @@
 package com.nuance.speechkitsample;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -27,6 +28,8 @@ import com.nuance.speechkit.TransactionException;
 
 import java.util.Calendar;
 import java.util.UUID;
+
+import Fragments.MainMenu;
 
 /**
  * This Activity is built to demonstrate how to perform TTS.
@@ -90,7 +93,9 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
 
         notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
         r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-        r.play();
+        if (r != null) {
+            r.play();
+        }
     }
 
     @Override
@@ -99,7 +104,9 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
             logs.setText("");
         } else if(v == toggleTTS) {
             toggleTTS();
-            r.stop();
+            if (r != null) {
+                r.stop();
+            }
         }
     }
 
@@ -155,7 +162,7 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
             public void onSuccess(Transaction transaction, String s) {
                 logs.append("\nonSuccess");
 
-                //Notification of a successful transaction. Nothing to do here.
+                //AddContact of a successful transaction. Nothing to do here.
             }
 
             @Override
@@ -191,7 +198,7 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
             public void onSuccess(Transaction transaction, String s) {
                 logs.append("\nonSuccess");
 
-                //Notification of a successful transaction. Nothing to do here.
+                //AddContact of a successful transaction. Nothing to do here.
             }
 
             @Override
@@ -288,5 +295,11 @@ public class TTSActivity extends DetailActivity implements View.OnClickListener,
             };
             PebbleKit.registerReceivedDataHandler(getApplicationContext(), ApDetectDataReceiver);
         }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
     }
 }

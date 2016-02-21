@@ -67,4 +67,14 @@
     <string name="about_components">This application was tested with:&lt;br /&gt;</string>
     <string name="bullet_point">\u2022 </string>
 
+    <string name="add_contact_title">Add Contact Information</string>
+    <string name="enter_contact_name">Enter Contact Name</string>
+    <string name="enter_contact_number">Enter Contact Number</string>
+    <string name="add_button">Add</string>
+
+    <string name="add_contact">Add Contact</string>
+    <string name="remove_contact">Remove Contact</string>
+    <string name="view_contact">View Contact</string>
+    <string name="trigger">Trigger</string>
+
 </resources>
