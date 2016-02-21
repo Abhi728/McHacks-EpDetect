@@ -15,39 +15,31 @@ import android.widget.ImageButton;
 
 import com.nuance.speechkitsample.R;
 
-public class HelloMonkeyActivity extends Activity implements View.OnClickListener {
+public class HelloMonkeyActivity extends Activity implements View.OnClickListener
+{
     private MonkeyPhone phone;
     private EditText numberField;
-    private String newContact;
 
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle)
+    {
         super.onCreate(bundle);
         setContentView(R.layout.main);
 
         phone = new MonkeyPhone(getApplicationContext());
 
-        ImageButton dialButton = (ImageButton) findViewById(R.id.btnCallHere);
+        ImageButton dialButton = (ImageButton)findViewById(R.id.dialButton);
         dialButton.setOnClickListener(this);
 
-        ImageButton hangupButton = (ImageButton) findViewById(R.id.btnDisconnectHere);
+        ImageButton hangupButton = (ImageButton)findViewById(R.id.hangupButton);
         hangupButton.setOnClickListener(this);
 
-        numberField = (EditText) findViewById(R.id.numberField);
-
+        numberField = (EditText)findViewById(R.id.numberField);
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnCallHere) {
+    public void onClick(View view)
+    {
 
-            newContact = numberField.getText().toString();
-            phone.connect(newContact);
-
-        } else if (view.getId() == R.id.btnDisconnectHere) {
-
-            phone.disconnect();
-
-        }
     }
 }
