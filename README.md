@@ -1,6 +1,7 @@
 EpDetect
 
 Detect Seizures using Smart Watches (Accelerometer , Gyroscope)
+
 Automatic SMS messaging 
 
 The MIT License (MIT)
