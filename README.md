@@ -1,7 +1,5 @@
 EpDetect
 
-*Free License (Use as is)
-
 Detect Seizures using Smart Watches (Accelerometer , Gyroscope)
 Automatic SMS messaging 
 
